@@ -48,7 +48,7 @@ header{
 }
 
 .no-item-wrapper{
-    height: 410px;
+    height: 440px;
     width: 24%;
     margin-left: 0.5%;
     margin-right: 0.5%;
@@ -88,7 +88,7 @@ header{
 
 .add-icon{
     opacity: .4;
-    height: 98%;
+    height: 95%;
     width: 60%;
     position: relative;
     left: 50%;
