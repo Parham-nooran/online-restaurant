@@ -1,0 +1,74 @@
+body{
+    font-family: sans-serif;
+}
+
+header{
+    height: 70px;
+    padding: 10px;
+    display: inline-flex;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    font-family: sans-serif;
+    background-color: rgb(0, 13, 56);
+}
+
+
+.title{
+    margin: 1%;
+    margin-left: 7%;
+    color: white;
+    font-size: 45px;
+    /* background-color: brown; */
+}
+
+
+.login{
+    margin: 1%;
+    margin-left: 60%;
+    color: white;
+    text-decoration: none;
+    padding-top: 15px;
+    /* background-color: violet; */
+}
+
+.inner-wrapper{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85%;
+    display: flex;
+    /* background: yellowgreen; */
+}
+
+
+.main-error-message, .main-404-message{
+    font-size: 75px;
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    /* background: blueviolet; */
+}
+
+.error-message{
+    font-size: 17px;
+    margin-left: 10px;
+    /* background: blueviolet; */
+}
+
+.main-404-message{
+    margin-top: 60px;
+    font-size: 65px;
+}
+
+.go-home{
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid rgb(71, 151, 255);
+    font-size: 20px;
+}
+
+.sad-image{
+    height: 500px;
+}

@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(43, 43, 43);
+}
+
+header{
+    height: 30px;
+    padding: 10px;
+    display: inline-flex;
+    width: 99%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    font-family: sans-serif;
+    background-color: rgb(0, 13, 56);
+}
+
+.title{
+    margin: 1%;
+    margin-left: 4%;
+    color: white;
+    font-size: 20px;
+    /* background-color: brown; */
+}
+
+.go-back{
+    margin-left: 1%;
+    margin-top: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.error{
+    background: rgb(238, 184, 184);
+    border: 1px solid rgb(220, 167, 167);
+    width: 25%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
+    color: rgb(177, 72, 98);
+    border-radius: 5px;
+}
+
+.wrapper{
+    width: 25%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 27%);
+}
+
+.inner-wrapper{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 10%;
+    padding-bottom: 18%;
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 12px black;
+    background-color: rgb(71, 79, 99);
+}
+
+.title{
+    color: rgb(77, 171, 244);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.input-box{
+    width: 78%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 5px;
+    font-size: 12px;
+    background-color: rgb(211, 221, 242);
+}
+
+.input-button{
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    width: 80%;
+    background-color: rgb(33, 149, 200);
+}
+
+.input-box, .input-button{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    margin-top: 28px;
+}

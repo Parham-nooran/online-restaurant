@@ -1,0 +1,156 @@
+body{
+    /* background: rgb(106, 144, 244); */
+    /* background: rgb(212, 0, 0); */
+}
+
+form{
+    
+}
+
+.main{
+    background-color: white;
+    width: 22vw;
+    height: 70vh;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%);
+	border-radius: 10px;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+    border: 1px solid rgb(119, 119, 119);
+    display: flex;
+    background-color: rgb(179, 0, 0);
+}
+
+.colored{
+    color: rgb(255, 166, 0);
+    height: 225px;
+    /* background-color: blue; */
+}
+
+.big-text{
+    font-size: x-large;
+    font-weight: 550; 
+    margin-top: 10px;
+    height: 50px;
+    /* background-color: blueviolet; */
+}
+
+.input{
+    opacity: 0;
+    width: 101%;
+    height: 34.5vh;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -1%);
+	cursor: pointer;
+    border-radius: 10px;
+    /* background-color: red; */
+}
+
+.input::-webkit-file-upload-button{
+    display: none;
+}
+
+.dropzone {
+	position: absolute;
+	box-sizing: border-box;
+    width: 90%;
+    height: 35vh;
+	border: 2px dashed;
+	border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -2%);
+	border-radius: 10px;
+    /* background-color: red; */
+}
+
+.upload-image{
+    height: 40px;
+    width: 55px;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+	border-radius: 4px;
+}
+
+.caption{
+    position: absolute;
+    font-size: small;
+    font-weight: 300;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+}
+
+.file-box{
+    background-color: rgb(215, 231, 255);
+    position: relative;
+    top: 60%;
+    width: 90%;
+    left: 2.1%;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+    color: black;
+    font-size: 10px;
+    text-align: left;
+    display: flex;
+    margin-bottom: 8px;
+    margin-top: 4px;
+}
+
+.file-box:hover{
+    cursor: pointer;
+    background-color: rgb(223, 236, 255);
+}
+
+.file-image{
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    padding-top: 9px;
+    /* background-color: yellowgreen; */
+}
+
+.name, .description{
+    height: 4vh;
+    width: 19vw;
+    border-radius: 1vh;
+}
+
+.add-button, .name, .description, #in-store{
+    margin-top: 2.3vh;
+}
+
+.description{
+    height: 8vh;
+}
+
+#in-store{
+    margin-right: 1vw;
+}
+
+#in-store, #score{
+    height: 4vh;
+    width: 3vw;
+}
+
+.add-button{
+    height: 5vh;
+    width: 18vw;
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(255, 166, 0);
+    color: white;
+}
+
+.star-icon{
+    height: 2.5vh;
+    filter: saturate(3);;
+}
