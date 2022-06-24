@@ -12,8 +12,8 @@ body{
 
 .main{
     background-color: white;
-    width: 22vw;
-    height: 70vh;
+    width: 25vw;
+    height: 75vh;
     display: block;
     text-align: center;
     position: absolute;
@@ -51,6 +51,7 @@ body{
     transform: translate(-50%, -1%);
 	cursor: pointer;
     border-radius: 10px;
+    margin-bottom: 1vh;
     /* background-color: blue; */
 }
 
@@ -59,7 +60,6 @@ body{
 }
 
 .dropzone {
-	position: absolute;
 	box-sizing: border-box;
     width: 90%;
     height: 35vh;
@@ -73,11 +73,20 @@ body{
 }
 
 .upload-image{
-    height: 40px;
-    width: 55px;
+    height: 8vh;
     position: absolute;
     left: 50%;
     top: 38%;
+    transform: translate(-50%, -50%);
+	border-radius: 4px;
+}
+
+.uploaded-image{
+    height: 35vh;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 	border-radius: 4px;
 }
@@ -99,12 +108,11 @@ body{
     left: 2.1%;
     border-radius: 4px;
     padding: 5px;
-    margin: 5px;
+    /* margin: 5px; */
     color: black;
     font-size: 10px;
     text-align: left;
     display: flex;
-    margin-bottom: 8px;
     margin-top: 4px;
 }
 

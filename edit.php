@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style/edit.css" type="text/css"></link>
-        <title>Add New Food</title>
+        <title>Edit Food Item</title>
     </head>
     <body>
         <?php
@@ -22,8 +22,9 @@
                     <div class="colored">
                         <br>
                         <div class="dropzone">
-                            <form action="./save.php" method="post" enctype="multipart/form-data">
-                                <img id="image-preview" class="food-image" title="upload" src="data:image/jpg;charset=utf8;base64,<?php if($row['Image']!='') { echo base64_encode($row['Image']);} ?>">
+                            <form action="./update.php" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="ID" value="<?php echo $id;?>">
+                                <img id="image-preview" class="uploaded-image" title="upload" src="data:image/jpg;charset=utf8;base64,<?php if($row['Image']!='') { echo base64_encode($row['Image']);} ?>">
                                 <input name="image-file" id="file-input" title="Browse File to Upload" class="input" type="file">
                                 <input class="name" type="text" title="name" name="name" placeholder="Name" value="<?php echo $row['Name'];?>">
                                 <input class="description" type="text" name="description" title="description" placeholder="Description" value="<?php echo $row['Description'];?>">

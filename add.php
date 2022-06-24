@@ -21,6 +21,7 @@
                         <input name="image-file" id="file-input" title="Browse File to Upload" class="input" type="file">
                         <input class="name" type="text" title="name" name="name" placeholder="Name">
                         <input class="description" type="text" name="description" title="description" placeholder="Description">
+                        <br>
                         <label for="in-store">In Store:</label>
                         <input id="in-store" type="number" name="number" min="0" max="25665" value="0">
                         <label for="score">Score</label>
