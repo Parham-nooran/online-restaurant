@@ -22,24 +22,39 @@
                 <p class="column">Total Price</p>
             </div>
         </div>
-        <div class="food-item">        
-            <div>
-                <img class="food-image" src="./statics/Pizza.jpg" alt="food-image">
-                <p class="info" id="name">Pizza Testino</p>
-            </div>
-            <p class="info" id="description">Chert</p>
-            <div class="inner-wrapper">
-                <div class="upper">
-                    <p class="info">4</p>
-                    <p class="info">12</p>
-                    <p class="info">5</p>
-                    <p class="info">60</p>
-                </div>
-                <form class="lower" action="./removefromcart.php">
-                    <input class="remove" type="submit" value="Remove">
-                </form>
-            </div>
-        </div>
+        <?php
+            require 'checkauthorization.php';
+            require 'databaseconnection.php';
+            $user_id = $_SESSION['ID'];
+            $query = "SELECT * FROM foods WHERE ID IN (SELECT FoodID FROM order_food WHERE OrderID IN (SELECT ID FROM orders where UserID = '$user_id' && Date_Time is Null))";
+            $rows = mysqli_query($connection, $query);
+            if(mysqli_num_rows($rows) > 0){
+                while(($row = $rows->fetch_assoc())){
+                    ?>
+                        <div class="food-item">        
+                            <div>
+                                <img class="food-image" src="data:image/jpg;charset=utf8;base64,<?php if($row['Image']!='') { echo base64_encode($row['Image']);} ?>" alt="food-image">
+                                <p class="info" id="name">Pizza Testino</p>
+                            </div>
+                            <p class="info" id="description"><?php echo $row['Description']; ?></p>
+                            <div class="inner-wrapper">
+                                <div class="upper">
+                                    <p class="info"><?php echo $row['Score']; ?></p>
+                                    <p class="info"><?php echo $row['Price']; ?></p>
+                                    <p class="info"><?php echo $row['Number']; ?></p>
+                                    <p class="info"><?php echo $row['Price'] * $row['Number']; ?></p>
+                                </div>
+                                <form class="lower" action="./removefromcart.php">
+                                    <input class="remove" type="submit" value="Remove">
+                                </form>
+                            </div>
+                        </div>
+                    <?php
+                }
+            }
+
+        ?>
+        
     </div>
 </body>
 </html>

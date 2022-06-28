@@ -15,7 +15,7 @@
     <?php
         session_start();
         unset($_SESSION['authorization']);
-        unset($_SESSION['Username']);
+        unset($_SESSION['ID']);
         if(!empty($_SESSION['error'])){
             echo '<div class="error">'.$_SESSION['error'].'</div>';
         }

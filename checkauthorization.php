@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(empty($_SESSION['authorization']) || $_SESSION['authorization'] == '' || empty($_SESSION['Username'])){
+    if(empty($_SESSION['ID'])){
         header("Location: ./login.php");
     }
 ?>

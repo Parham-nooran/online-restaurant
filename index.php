@@ -15,7 +15,11 @@
     </header>
     <?php
         require "databaseconnection.php";
+        session_start();
         unset($_SESSION['error']);
+        unset($_SESSION['message']);
+        unset($_SESSION['ID']);
+        unset($_SESSION['authorization']);
         $query = "SELECT ID, Name, Number, Image, Score, Description FROM foods";
         $result = mysqli_query($connection, $query);
         $index = 1;

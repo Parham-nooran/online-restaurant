@@ -44,7 +44,7 @@ header{
 }
 
 .inner-wrapper{
-    height: 70vh;
+    height: 75vh;
     width: 24%;
     margin-left: 0.5%;
     margin-right: 0.5%;
@@ -163,7 +163,7 @@ header{
 }
 
 .in-store{
-    margin-left: 40%;
+    margin-left: 6vw;
     /* background-color: turquoise; */
 }
 
@@ -198,4 +198,15 @@ header{
     left: 50%;
     top: 0%;
     transform: translate(-50%);
+}
+
+#number{
+    border: .1mm solid gray;
+    border-radius: .5vw;
+    margin-left: 9vw;
+    width: 3.8vw;
+}
+
+.number{
+    margin-left: 1vw;
 }

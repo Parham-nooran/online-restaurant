@@ -1,12 +1,12 @@
 body{
-    background-color: rgb(43, 43, 43);
+    /* background-color: rgb(43, 43, 43); */
 }
 
 header{
-    height: 30px;
+    height: 50px;
     padding: 10px;
     display: flex;
-    width: 99%;
+    width: 98vw;
     position: relative;
     left: 50%;
     transform: translate(-50%, -15%);
@@ -23,10 +23,11 @@ header{
 }
 
 .go-back{
+    margin: 1%;
     margin-left: 1%;
-    margin-top: 5px;
     color: white;
     text-decoration: none;
+    /* background-color: violet; */
 }
 
 .error{
@@ -45,6 +46,24 @@ header{
     color: rgb(177, 72, 98);
     border-radius: 5px;
 }
+
+.message{
+    background: rgba(0, 255, 21, 0.747);
+    border: 1px solid rgb(18, 156, 0);
+    width: 25%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
+    color: rgb(10, 85, 0);
+    border-radius: 5px;
+}
+
 
 .wrapper{
     width: 25%;

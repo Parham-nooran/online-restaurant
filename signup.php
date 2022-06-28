@@ -17,6 +17,9 @@
         if(!empty($_SESSION['error'])){
             echo '<div class="error">'.$_SESSION['error'].'</div>';
         }
+        if(!empty($_SESSION['message'])){
+            echo '<div class="message">'.$_SESSION['message'].'</div>';
+        }
     ?>
     <div class="wrapper">
         <div class="inner-wrapper">
@@ -25,7 +28,7 @@
                 <input class="input-box" type="text" name="Email" title="email" placeholder="Email">
                 <input class="input-box" type="password" name="Password" title="password" placeholder="Password">
                 <input class="input-box" type="password" name="Repeat-Password" title="Repeat password" placeholder="Repeat password">
-                <input class="input-button" type="submit" title="login" value="Login">
+                <input class="input-button" type="submit" title="login" value="Signup">
             </form>
         </div>
     </div>

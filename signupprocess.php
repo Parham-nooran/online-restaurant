@@ -5,6 +5,8 @@
             if(filter_var($_POST['Email'], FILTER_VALIDATE_EMAIL)){
                 session_start();
                 unset($_SESSION['error']);
+                $message = 'User added successfully!';
+                $_SESSION['message'] = $message;
                 header('Location: ./signup.php');
                 $email = $_POST['Email'];
                 $password = $_POST['Password'];
@@ -32,5 +34,4 @@
         unset($_SESSION['authorization']);
         header('Location: ./signup.php');
     }
-    
 ?>
