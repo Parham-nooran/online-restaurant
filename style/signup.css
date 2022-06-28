@@ -5,7 +5,7 @@ body{
 header{
     height: 30px;
     padding: 10px;
-    display: inline-flex;
+    display: flex;
     width: 99%;
     position: relative;
     left: 50%;

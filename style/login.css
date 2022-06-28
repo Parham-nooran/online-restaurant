@@ -3,10 +3,10 @@ body{
 }
 
 header{
-    height: 30px;
+    height: 50px;
     padding: 10px;
-    display: inline-flex;
-    width: 99%;
+    display: flex;
+    width: 98vw;
     position: relative;
     left: 50%;
     transform: translate(-50%, -15%);
@@ -23,10 +23,11 @@ header{
 }
 
 .go-back{
+    margin: 1%;
     margin-left: 1%;
-    margin-top: 5px;
     color: white;
     text-decoration: none;
+    /* background-color: violet; */
 }
 
 .error{

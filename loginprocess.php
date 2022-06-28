@@ -15,6 +15,8 @@
         unset($_SESSION['error']);
         if($row['Role'] == 1){
             header('Location: ./adminpanel.php');
+        } elseif($row['Role'] == 0){
+            header('Location: ./userpanel.php');
         }
     } else{
         session_start();

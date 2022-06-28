@@ -17,10 +17,19 @@
         unset($_SESSION['error']);
         $query = "SELECT ID, Name, Number, Image, Score, Description FROM foods";
         $result = mysqli_query($connection, $query);
+        $index = 2;
+        ?>
+            <div class="wrapper">
+                <div class="no-item-wrapper" onclick="location.href = './add.php'">
+                    <div class="image-wrapper" >
+                        <img class="add-icon" src="./statics/add.png" alt="food-image">
+                        <p class="add-icon-caption">Add new item</p>
+                    </div>
+                </div>
+        <?php
         while($row = $result->fetch_assoc()){
-            $index = 1;
+            if($index != 2) { echo '<div class="wrapper">';}
             ?>
-                <div class="wrapper">
                 <div class="inner-wrapper">
                     <div class="image-wrapper">
                         <img class="food-image" src="data:image/jpg;charset=utf8;base64,<?php if($row['Image']!='') { echo base64_encode($row['Image']);} ?>" alt="food-image">
@@ -74,16 +83,9 @@
                     ?>
                 </div>
             <?php
+            $index = 1;
         }
     ?>
-    <div class="wrapper">
-        <div class="no-item-wrapper" onclick="location.href = './add.php'">
-            <div class="image-wrapper" >
-                <img class="add-icon" src="./statics/add.png" alt="food-image">
-                <p class="add-icon-caption">Add new item</p>
-            </div>
-        </div>
-    </div>
     <script src="./script/script.js"></script>
 </body>
 </html>
