@@ -48,7 +48,7 @@
                                 <p class="price"><?php echo $row['Price'] ?>$</p>
                             </div>
                             <input type="hidden" name='food_ID' value='<?php echo $row['ID']; ?>'>
-                            <input class="add" name='submit' type="submit" title="Add" name="Add" value="Add to Cart">
+                            <input class="add" <?php if($row['Number']==0){echo 'disabled';}?> name='submit' type="submit" title="Add" name="Add" value="Add to Cart">
                         </form>
                     </div>
                         <?php

@@ -77,7 +77,7 @@ header{
 
 .info{
     padding: 1vh;
-    padding-top: 6vh;
+    padding-top: 7vh;
     margin: 0.8vw;
     width: 8vw;
     vertical-align: middle;
@@ -106,7 +106,7 @@ header{
     padding: 1vh;
     margin: 0.8vw;
     width: 8vw;
-    padding-top: 2vh;
+    padding-top: 3vh;
     border-radius: 1vw;
     font-family: sans-serif;
     text-align: center;
@@ -203,6 +203,7 @@ header{
     position: relative;
     left: 50%;
     transform: translate(-50%);
+    margin-bottom: 3vh;
     background-color: rgb(2, 211, 26);
 }
 
