@@ -20,7 +20,8 @@
         $number = $_POST['number'];
         $score = $_POST['score'];
         $description = $_POST['description'];
-        $query = "INSERT INTO foods(Name, Number, Image, Score, Description) VALUES ('$name', '$number', '$imageContent', '$score', '$description')";
+        $price = $_POST['price'];
+        $query = "INSERT INTO foods(Name, Number, Image, Score, Description, Price) VALUES ('$name', '$number', '$imageContent', '$score', '$description', '$price')";
         mysqli_query($connection, $query);
     }
     header('Location: ./adminpanel.php');

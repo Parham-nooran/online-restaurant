@@ -44,7 +44,7 @@ header{
 }
 
 .inner-wrapper{
-    height: 75vh;
+    height: 83vh;
     width: 24%;
     margin-left: 0.5%;
     margin-right: 0.5%;
@@ -127,6 +127,9 @@ header{
 }
 
 .food-name{
+    font-size: 3.3vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
     font-weight: bolder;
 }
 
@@ -134,7 +137,7 @@ header{
     height: 9.5vh;
     vertical-align: middle;
     text-align: left;
-    margin-bottom: 1.5vh;
+    margin-top: 0vh;
     padding: 6px;
     border-radius: 10px;
     background-color: rgb(240, 240, 240);
@@ -168,6 +171,13 @@ header{
 }
 
 .add{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
     background-color: rgb(2, 211, 26);
 }
 
@@ -178,16 +188,6 @@ header{
 .add:active{
     border: 4px solid rgb(2, 201, 26);
     background-color: rgb(2, 211, 26);
-}
-
-.add{
-    width: 100%;
-    height: 100%;
-    border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 .add-form{
@@ -209,4 +209,32 @@ header{
 
 .number{
     margin-left: 1vw;
+}
+
+.message{
+    background: rgba(0, 255, 21, 0.747);
+    border: 1px solid rgb(18, 156, 0);
+    width: 25%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
+    color: rgb(10, 85, 0);
+    border-radius: 5px;
+}
+
+.price{
+    font-size: 3vh;
+    border-radius: 10px;
+    margin-top: 0vh;
+    background-color: rgb(240, 240, 240);
+}
+
+.price, .description, .num-info{
+    margin-bottom: 2.5vh;
 }

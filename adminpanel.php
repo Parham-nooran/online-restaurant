@@ -15,7 +15,7 @@
         require 'checkauthorization.php';
         require "databaseconnection.php";
         unset($_SESSION['error']);
-        $query = "SELECT ID, Name, Number, Image, Score, Description FROM foods";
+        $query = "SELECT * FROM foods";
         $result = mysqli_query($connection, $query);
         $index = 2;
         ?>
@@ -42,6 +42,7 @@
                             <img class="star-icon" src="./statics/star.png" alt="">
                             <p class="in-store">In Store: <?php echo $row['Number'] ?></p>
                         </div>
+                        <p class="price"><?php echo $row['Price'] ?>$</p>
                     </div>
                     <form class="edit-form" method="post" action="./edit.php">
                         <input type="hidden" name='ID' value='<?php echo $row['ID']; ?>'>
@@ -68,6 +69,7 @@
                                             <img class="star-icon" src="./statics/star.png" alt="">
                                             <p class="in-store">In Store: <?php echo $row['Number'] ?></p>
                                         </div>
+                                        <p class="price"><?php echo $row['Price'] ?>$</p>
                                     </div>
                                     <form class="edit-form" method="post" action="./edit.php">
                                         <input type="hidden" name='ID' value='<?php echo $row['ID']; ?>'>

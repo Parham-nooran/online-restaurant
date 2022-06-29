@@ -16,11 +16,12 @@
     <?php
         require "databaseconnection.php";
         session_start();
-        unset($_SESSION['error']);
-        unset($_SESSION['message']);
-        unset($_SESSION['ID']);
         unset($_SESSION['authorization']);
-        $query = "SELECT ID, Name, Number, Image, Score, Description FROM foods";
+        unset($_SESSION['message']);
+        unset($_SESSION['error']);
+        unset($_SESSION['msg']);
+        unset($_SESSION['ID']);
+        $query = "SELECT * FROM foods";
         $result = mysqli_query($connection, $query);
         $index = 1;
         while($row = $result->fetch_assoc()){
@@ -38,6 +39,7 @@
                             <img class="star-icon" src="./statics/star.png" alt="">
                             <p class="in-store">In Store: <?php echo $row['Number'] ?></p>
                         </div>
+                        <p class="price"><?php echo $row['Price'] ?>$</p>
                     </div>
                 </div>
                     <?php
@@ -56,6 +58,7 @@
                                             <img class="star-icon" src="./statics/star.png" alt="">
                                             <p class="in-store">In Store: <?php echo $row['Number'] ?></p>
                                         </div>
+                                        <p class="price"><?php echo $row['Price'] ?>$</p>
                                     </div>
                                 </div>
                             <?php 

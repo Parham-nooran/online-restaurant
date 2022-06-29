@@ -15,13 +15,16 @@
         <a class="login" href="./login.php">Log out</a>
     </header>
     <?php 
-        // require 'checkauthorization.php';
+        require 'checkauthorization.php';
         require "databaseconnection.php";
         unset($_SESSION['error']);
-        $query = "SELECT ID, Name, Number, Image, Score, Description FROM foods";
+        if(!empty($_SESSION['msg'])){
+            echo '<div class="message">'.$_SESSION['msg'].'</div>';
+            unset($_SESSION['msg']);
+        }
+        $query = "SELECT * FROM foods";
         $result = mysqli_query($connection, $query);
         $index = 2;
-        
         while($row = $result->fetch_assoc()){
             ?>
                 <div class="wrapper">
@@ -42,6 +45,7 @@
                                     <label class="number" for="number">Number: </label>
                                     <input id="number" name="number" type="number" min="1" max="<?php echo $row['Number']?>" value="1">
                                 </div>
+                                <p class="price"><?php echo $row['Price'] ?>$</p>
                             </div>
                             <input type="hidden" name='food_ID' value='<?php echo $row['ID']; ?>'>
                             <input class="add" name='submit' type="submit" title="Add" name="Add" value="Add to Cart">
@@ -81,5 +85,7 @@
             $index = 1;
         }
     ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/userpanel.js"></script>
 </body>
 </html>

@@ -106,6 +106,7 @@ header{
     padding: 1vh;
     margin: 0.8vw;
     width: 8vw;
+    padding-top: 2vh;
     border-radius: 1vw;
     font-family: sans-serif;
     text-align: center;
@@ -113,7 +114,7 @@ header{
 }
 
 .header-wrapper{
-    transform: translate(44vw);
+    transform: translate(22vw);
 }
 
 .upper, .header-wrapper{
@@ -149,4 +150,67 @@ header{
 .remove:active{
     border: 4px solid rgb(225, 145, 28);
     background-color: rgb(235, 155, 38);
+}
+
+.total-price{
+    font-size: 3.5vh;
+    font-weight: bolder;
+    font-family: sans-serif;
+    margin-left: 1vw;
+    width: 20.5vw;
+    border-radius: 1vw;
+    padding: .5vh;
+    /* background-color: red; */
+}
+
+.no-item{
+    /* height: 30vh; */
+    padding: 5px;
+    display: flex;
+    width: 86vw;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    border-radius: 1vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(225, 225, 225);
+}
+
+.no-item-column{
+    font-weight: bolder;
+    padding: 1vh;
+    margin: 0.8vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 2vh;
+    border-radius: 1vw;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgb(219, 219, 219);
+    width: 30vw;
+}
+
+.checkout{
+    width: 30vw;
+    height: 5vh;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(2, 211, 26);
+}
+
+.checkout:hover{
+    background-color: rgb(22, 231, 46);
+}
+
+.checkout:active{
+    border: 4px solid rgb(2, 201, 26);
+    background-color: rgb(2, 211, 26);
 }
