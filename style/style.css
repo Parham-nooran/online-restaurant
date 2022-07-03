@@ -167,17 +167,18 @@ header{
 }
 
 .score{
-    margin-left: 5%;
+    margin-left: 1vw;
     /* background-color: brown; */
 }
 
 .star-icon{
     height: 2.5vh;
+    margin-right: 0%;
     filter: saturate(3);;
 }
 
 .in-store{
-    margin-left: 40%;
+    margin-left: 6.5vw;
     /* background-color: turquoise; */
 }
 

@@ -106,10 +106,16 @@ header{
     }
     
     .inner-wrapper, .no-item-wrapper {
-        height: 95vh;
+        height: 125vh;
         margin-bottom: 5vh;
         margin-left: 20vw;
-        width: 80vw;
+        width: 90vw;
+    }
+    .info-wrapper{
+        margin-left: 0%;
+        width: 55vw;
+        position: relative;
+        transform: translate(-30%);
     }
 }
 
@@ -126,7 +132,7 @@ header{
     .inner-wrapper, .no-item-wrapper {
         height: 85vh;
         width: 60vw;
-    }   
+    }
 }
 .info-wrapper{
     border-radius: 10px;
