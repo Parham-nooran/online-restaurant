@@ -102,26 +102,55 @@ header{
 }
 
 
-@media(max-width: 1000px){
+@media(max-width: 600px){
     .wrapper{
         display: block;
+        text-align: center;
+        margin-bottom: 6vh;
     }
-    .image{
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-        height: 460px;
-        width: 80%;
+    
+    .inner-wrapper, .no-item-wrapper {
+        height: 82vh;
+        margin-bottom: 5vh;
+        margin-left: 30vw;
+        width: 40vw;
+    }
+    .add-icon{
+        opacity: .4;
+        height: 40vh;
+        width: 25vw;
+        margin-left: 0%;
+        margin-right: 14vw;
         position: relative;
-        left: 50%;
-        transform: translate(-50%);
+        top: 80%;
+        transform: translate(-50%, -50%);
+    } 
+    .add-icon-caption{
+        opacity: .4;
+        font-family: sans-serif;
+        font-size: 1.8vw;
+        position: relative;
+        left: 12%;
+        top: 40%;
+        transform: translate(-10%, 0%);
     }
 }
 
-@media(max-width: 600px){
-    .image{
-        height: 300px;
+@media(max-width: 900px){
+    .in-store{
+        margin-left: 0vh;
+        /* background-color: turquoise; */
     }
+    .score{
+        margin-left: 0%;
+        margin-right: 0%;
+        /* background-color: brown; */
+    }
+    .inner-wrapper, .no-item-wrapper {
+        height: 82vh;
+    }   
 }
+
 
 .info-wrapper{
     border-radius: 10px;
@@ -140,10 +169,11 @@ header{
 .description{
     height: 9.5vh;
     vertical-align: middle;
+    font-size: 2.9vh;
     text-align: left;
     margin-top: 0vh;
-    padding: 6px;
-    border-radius: 10px;
+    padding: 1vh;
+    border-radius: 1vw;
     background-color: rgb(240, 240, 240);
 }
 
@@ -160,16 +190,18 @@ header{
 
 .score{
     margin-left: 5%;
+    margin-right: 0%;
     /* background-color: brown; */
 }
 
 .star-icon{
     height: 2.5vh;
-    filter: saturate(3);;
+    filter: saturate(3);
+    margin-right: 0%;
 }
 
 .in-store{
-    margin-left: 40%;
+    margin-left: 16vh;
     /* background-color: turquoise; */
 }
 
@@ -228,4 +260,12 @@ header{
 
 .price, .description, .num-info{
     margin-bottom: 2.5vh;
+}
+
+input{
+    font-size: 2.5vh;
+}
+
+p{
+    font-size: 2.5vh;
 }

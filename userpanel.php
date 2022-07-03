@@ -24,7 +24,7 @@
         }
         $query = "SELECT * FROM foods";
         $result = mysqli_query($connection, $query);
-        $index = 2;
+        $index = 1;
         while($row = $result->fetch_assoc()){
             ?>
                 <div class="wrapper">
@@ -72,6 +72,7 @@
                                                 <label class="number" for="number">Number: </label>
                                                 <input id="number" name="number" type="number" min="1" max="<?php echo $row['Number']?>" value="1">
                                             </div>
+                                            <p class="price"><?php echo $row['Price'] ?>$</p>
                                         </div>
                                             <input type="hidden" name='food_ID' value='<?php echo $row['ID']; ?>'>
                                             <input class="add" name='submit' type="submit" title="Add" name="Add" value="Add to Cart">
