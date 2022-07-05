@@ -299,3 +299,30 @@ p{
     width: 10vw;
 }
 
+
+.sort{
+    font-family: sans-serif;
+    z-index: 999;
+}
+
+
+.filter{
+    display: flex;
+}
+
+
+.select-button, .select{
+    height: 5vh;
+    border-radius: 3vw;
+    border: 1px solid gray;
+}
+
+.select{
+    width: 7vw;
+}
+
+
+.select-button{
+    width: 5vw;
+}
+

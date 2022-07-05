@@ -13,10 +13,19 @@
         <a class="signup" href="./signup.php">Sign up</a>
         <a class="login" href="./login.php">Login</a>
     </header>
-    <div class="search">
+    <div class="filter">
         <form class="search-form" action="." method="get">
             <input name="search-value" type="text" placeholder="Name..." class="search-box">
             <input class="search-button" name="search-button" type="submit" value="Search">
+        </form>
+        <form class="sort" action="." method="get">
+            <label for="sort">Sort by:</label>
+            <select class="select" name="sort" id="sort">
+                <option value="score">Score</option>
+                <option value="Number">In Store</option>
+                <option value="Price">Price</option>
+            </select>
+            <input class="select-button" type="submit" value="Sort">
         </form>
     </div>
     <?php
@@ -28,8 +37,14 @@
         unset($_SESSION['msg']);
         unset($_SESSION['ID']);
         if(empty($_GET['search-value'])){
-            $query = "SELECT * FROM foods";
-            $result = mysqli_query($connection, $query);
+            if(empty($_GET['sort'])){
+                $query = "SELECT * FROM foods";
+                $result = mysqli_query($connection, $query);
+            } else{
+                $name = $_GET['sort'];
+                $query = "SELECT * FROM foods ORDER BY $name DESC";
+                $result = mysqli_query($connection, $query);
+            }
         } else{
             $name = $_GET['search-value'];
             $query = "SELECT * FROM foods WHERE Name LIKE '%$name%'";
