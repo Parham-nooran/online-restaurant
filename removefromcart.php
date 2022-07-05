@@ -1,5 +1,6 @@
 <?php
     require 'checkauthorization.php';
+    require 'checkuserauthorization.php';
     require 'databaseconnection.php';
     $food_id = $_POST['foodID'];
     $order_id = $_POST['orderID'];

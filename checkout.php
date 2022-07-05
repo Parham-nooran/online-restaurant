@@ -1,5 +1,6 @@
 <?php
     require 'databaseconnection.php';
+    require 'checkuserauthorization.php';
     require 'checkauthorization.php';
     $id = $_POST['orderID'];
     $query="UPDATE orders SET Date_Time=now() WHERE ID=$id";

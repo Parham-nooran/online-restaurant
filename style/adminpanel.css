@@ -269,3 +269,33 @@ input{
 p{
     font-size: 2.5vh;
 }
+
+
+.search-form{
+    display: flex;
+    width: 50vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: 20vw;
+    /* background-color: blue; */
+}
+
+.search-box{
+    width: 30vw;
+    height: 5vh;
+    padding-left: 1vw;
+}
+
+.search-button, .search-box{
+    border-radius: 5vw;
+    border: 1px solid gray;
+}
+
+.search-button{
+    position: relative;
+    transform: translate(-100%);
+    height: 5.5vh;
+    width: 10vw;
+}
+

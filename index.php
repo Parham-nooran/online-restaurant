@@ -13,6 +13,12 @@
         <a class="signup" href="./signup.php">Sign up</a>
         <a class="login" href="./login.php">Login</a>
     </header>
+    <div class="search">
+        <form class="search-form" action="." method="get">
+            <input name="search-value" type="text" placeholder="Name..." class="search-box">
+            <input class="search-button" name="search-button" type="submit" value="Search">
+        </form>
+    </div>
     <?php
         require "databaseconnection.php";
         session_start();
@@ -21,8 +27,14 @@
         unset($_SESSION['error']);
         unset($_SESSION['msg']);
         unset($_SESSION['ID']);
-        $query = "SELECT * FROM foods";
-        $result = mysqli_query($connection, $query);
+        if(empty($_GET['search-value'])){
+            $query = "SELECT * FROM foods";
+            $result = mysqli_query($connection, $query);
+        } else{
+            $name = $_GET['search-value'];
+            $query = "SELECT * FROM foods WHERE Name LIKE '%$name%'";
+            $result = mysqli_query($connection, $query);
+        }
         $index = 1;
         while($row = $result->fetch_assoc()){
             ?>

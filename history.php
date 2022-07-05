@@ -15,6 +15,7 @@
     </header>
         <?php 
             require 'checkauthorization.php';
+            require 'checkuserauthorization.php';
             require 'databaseconnection.php';
             if(!empty($_SESSION['msg'])){
                 echo '<div class="message">'.$_SESSION['msg'].'</div>';

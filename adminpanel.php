@@ -13,12 +13,25 @@
     </header>
     <?php 
         require 'checkauthorization.php';
+        require 'checkadminauthorization.php';
         require "databaseconnection.php";
         unset($_SESSION['error']);
-        $query = "SELECT * FROM foods";
-        $result = mysqli_query($connection, $query);
+        if(empty($_GET['search-value'])){
+            $query = "SELECT * FROM foods";
+            $result = mysqli_query($connection, $query);
+        } else{
+            $name = $_GET['search-value'];
+            $query = "SELECT * FROM foods WHERE Name LIKE '%$name%'";
+            $result = mysqli_query($connection, $query);
+        }
         $index = 2;
         ?>
+            <div class="search">
+                <form class="search-form" action="./adminpanel.php" method="get">
+                    <input name="search-value" type="text" placeholder="Name..." class="search-box">
+                    <input class="search-button" name="search-button" type="submit" value="Search">
+                </form>
+            </div>
             <div class="wrapper">
                 <div class="no-item-wrapper" onclick="location.href = './add.php'">
                     <div class="image-wrapper" >

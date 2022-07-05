@@ -17,6 +17,7 @@
         <div class="header">
             <?php 
                 require 'checkauthorization.php';
+                require 'checkuserauthorization.php';
                 require 'databaseconnection.php';
                 $user_id = $_SESSION['ID'];
                 $query = "SELECT ID FROM orders where UserID = '$user_id' AND Date_Time is Null";

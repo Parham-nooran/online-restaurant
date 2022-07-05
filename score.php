@@ -1,5 +1,6 @@
 <?php
     require 'checkauthorization.php';
+    require 'checkuserauthorization.php';
     require 'databaseconnection.php';
     $score = $_POST['score'];
     $id = $_POST['ID'];

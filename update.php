@@ -1,5 +1,6 @@
 <?php
     require 'checkauthorization.php';
+    require 'checkadminauthorization.php';
     require 'databaseconnection.php';
     if(isset($_POST["submit"])){
         if((!empty($_FILES["image-file"]["name"])) && (!empty($_FILES["image-file"]["tmp_name"]))){

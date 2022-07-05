@@ -1,5 +1,6 @@
 <?php
     require 'checkauthorization.php';
+    require 'checkuserauthorization.php';
     require 'databaseconnection.php';
     unset($_SESSION['msg']);
     $user_id = $_SESSION['ID'];

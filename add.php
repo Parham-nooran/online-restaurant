@@ -10,6 +10,7 @@
     <body>
         <?php
             require 'checkauthorization.php';
+            require 'checkadminauthorization.php';
         ?>
         <header>
             <a class="go-back" href="./adminpanel.php">Go Back</a>

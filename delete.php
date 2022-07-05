@@ -1,5 +1,6 @@
 <?php
     require 'checkauthorization.php';
+    require 'checkadminauthorization.php';
     require 'databaseconnection.php';
     if(isset($_POST["submit"])){
         $id = $_POST['ID'];
